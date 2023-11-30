@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heladeria JOSS</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body style="background-color:rgb(207, 207, 207) ;">
+
+    <div id="shi" style="margin-top:100px ;">
+
+             <!--navbar-->
+    
+        <div class="text-center">
+            <nav class=" fixed-top navbar navbar-expand-lg navbar-dark bg-dark; text-center nav">
+                <div class="container-fluid">
+                    <h2 class=" mx-auto " ref="#">Heladería Joss <img src="img/h32.png"></h2>
+
+                </div>
+              </nav>
+        </div>
+
+             <!--fin navbar-->
+
+
+
+
+            <!--helados 1-->
+
+        <section id="helad">
+
+             <div class="row m-2">
+                  
+                        <div class="col p-2 text-center">
+                           <button onclick="helado1()">
+                                 <img  style="border-radius: 25px  25px  25px  25px ;" class="border border-dark" src="img/chocolate.png" width="200px" height="200px" alt="">
+                               <h5>Chocolate</h5>
+                            </button>
+                        </div>
+
+                         <div class="col p-2 text-center">
+                            <button onclick="helado2()">
+                                <img  style="border-radius: 25px  25px  25px  25px ;" class="border border-dark" src="img/teta.png" width="200px" height="200px" alt="">
+                                <h5>Helado de Tetaaaa</h5>
+                            </button>
+                        </div>
+                 </div>
+
+
+                 
+
+
+                 <div class="row m-2">        
+                        <div class="col p-2 text-center">
+                            <button onclick="helado3()">
+                                <img  style="border-radius: 25px  25px  25px  25px ;" class="border border-dark" src="img/paleta-fresa.png" width="200px" height="200px" alt="">
+                                <h5>Paletas de fresa</h5>
+                            </button>
+                        </div>
+
+                         <div class="col p-2 text-center">
+                            <button onclick="helado4()">
+                                <img  style="border-radius: 25px  25px  25px  25px ;" class="border border-dark" src="img/4-sabores.png" width="200px" height="200px" alt="">
+                                <h5>Helado 4 sabores</h5>
+                            </button>
+                        </div>
+    
+                 </div>
+        </section>  
+
+            <!-- fin helados 1-->
+
+
+
+            <!--helados 2-->
+
+        <section id="ordena" class="ordenar">
+            <div class="row">
+                <div class="col m-1 text-center">
+                    <h3>helado: <span id="nombre"></span></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col m-1 text-center">
+                    <h3>Precio: <span id="precio"></span>  <span>$</span></h3>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-3  mx-auto">
+                    <div class="input-group ">
+                      <span class="input-group-text fw-bold" id="inputGroupPrepend2">Cantidad</span>
+                      <input type="number" class="form-control" id="valor"  aria-describedby="inputGroupPrepend2" required>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="row">
+                <div class="col m-2 text-center">
+                   <button class="btn btn-primary" onclick="listo()">Listo</button>
+                </div>
+            </div>
+        </section>
+
+             <!-- fin helados 2-->
+
+            
+    </div>
+
+             <!--footer-->
+
+        <div class="p-2   text-center  fixed-bottom " style="background-color:rgb(73, 0, 126) ; ">
+              <footer id="footer">
+                <div class="container">
+                  <h3 class="text-end" style="color:rgb(255, 255, 255) ;">Total: <span id="total">0</span></h3>
+                </div>
+              </footer>
+        </div>
+
+             <!--footer-->
+
+    
+</body>
+
+
+
+
+        <script>
+            
+            function helado1(){
+                document.getElementById("ordena").classList.add("helado");
+                document.getElementById("helad").classList.add("ordenar");
+
+                var p1 = 1;
+                var n1 = "Chocolate"
+
+                document.getElementById("precio").innerHTML = p1;
+                document.getElementById("nombre").innerHTML = n1;
+            }
+
+
+
+
+
+
+            function helado2(){
+                document.getElementById("ordena").classList.add("helado");
+                document.getElementById("helad").classList.add("ordenar");
+
+                var p2 = 2;
+                var n2 = "Helado de Tetaaaa"
+
+                document.getElementById("precio").innerHTML = p2;
+                document.getElementById("nombre").innerHTML = n2;
+            }
+
+
+
+
+
+            function helado3(){
+                document.getElementById("ordena").classList.add("helado");
+                document.getElementById("helad").classList.add("ordenar");
+
+                var p3 = 3;
+                var n3 = "Paletas de fresa"
+
+                document.getElementById("precio").innerHTML = p3;
+                document.getElementById("nombre").innerHTML = n3;
+            }
+
+
+
+
+
+
+            function helado4(){
+                document.getElementById("ordena").classList.add("helado");
+                document.getElementById("helad").classList.add("ordenar");
+
+                var p4 = 4;
+                var n4 = "Helado 4 sabores"
+
+                document.getElementById("precio").innerHTML = p4;
+                document.getElementById("nombre").innerHTML = n4;
+            }
+
+
+            
+
+
+
+
+
+
+            function listo(){
+                var v1 = document.getElementById("precio").value;
+                var v2 = document.getElementById("valor").value;
+
+                var r = Number(v1)*Number(v2);
+
+                document.getElementById("total").innerHTML=r;
+            }
+
+
+
+
+        </script>
+
+        <script src="js/bootstrap.bundle.js"></script>
+
+</html>
